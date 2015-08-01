@@ -1,6 +1,30 @@
 class GroupsController < ApplicationController
 
   def index
-    flash[:notice] = "morning!"
+      @groups = Group.all
   end
+
+  def show
+  end
+
+  def new
+      @group = Group.new
+  end
+
+  def edit
+
+  end
+
+  def create
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
+  end
+
 end
