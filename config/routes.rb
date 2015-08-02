@@ -54,7 +54,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :groups
+  resources :groups do
+    resources :posts
+  end
 
 root 'groups#index'
 end

@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
 
   def show
       @group = Group.find(params[:id])
+      @posts = @group.posts
   end
 
   def new
@@ -37,7 +38,9 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-
+      @group = Group.find(params[:id])
+      @group.destroy
+      redirect_to groups_path, alert: '討論版已刪除'
   end
 
   private 
