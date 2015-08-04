@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem "devise", github: "plataformatec/devise", branch: "master"
 
 gem 'bootstrap-sass'
 gem "simple_form"
