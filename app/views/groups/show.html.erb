@@ -28,7 +28,7 @@
       <% @posts.each do |post| %>
         <tr>
           <td><%= post.id %> </td>
-          <td> <%= simple_format(post.content) %> </td>
+          <td> <%= render_post_content(post) %> </td>
           <td><%= User.find(post.user_id).name %></td>
           <td>
             <% if current_user && post.editable_by?(current_user) %>
